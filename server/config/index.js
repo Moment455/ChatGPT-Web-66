@@ -22,7 +22,7 @@ function getConfig(key) {
 			type: 'redis',
 			host: '127.0.0.1',
 			port: 6379,
-			password: '19990414'
+			password: ''
 		},
 		email: '2371605990@qq.com',  // 邮件地址
 		email_config: {  // 邮件配置信息
