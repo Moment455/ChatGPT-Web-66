@@ -52,12 +52,12 @@ const configStore = create<ConfigState>()(
       ],
       config: {
         model: 'gpt-3.5-turbo',
-        //limit_message: 5,
         temperature: 0.8,
         presence_penalty: 1,
         frequency_penalty: 0,
         max_tokens: 2000
       },
+      limit_message: 5,
       setConfigModal: (value) => set({ configModal: value }),
       changeConfig: (config) =>
         set((state: ConfigState) => ({
