@@ -36,7 +36,7 @@ router.get('/send_sms', async (req, res) => {
     const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
     const phoneRegex = /^1[3456789]\d{9}$/;
     if (!emailRegex.test(source) && !phoneRegex.test(source)) {
-        res.json((0, utils_1.httpBody)(-1, '请输入正确邮箱或手机号'));
+        res.json((0, utils_1.httpBody)(-1, '请输入正确邮箱'));
         return;
     }
 
@@ -59,7 +59,7 @@ router.get('/send_sms', async (req, res) => {
             </div>
             <p style="font-size: 16px; color: #111; text-align: center; line-height: 1.5;">此验证码将在 10 分钟后失效，非本人操作请忽略。</p>
             <hr style="border: none; border-top: 1px solid #eaeaea; margin: 30px 0;">
-            <p style="font-size: 14px; color: #999; text-align: center;">点击访问：<a href="https://chat.nonezero.top" style="color: #007AFF; text-decoration: none;">AI 助手</a></p>
+            <p style="font-size: 14px; color: #999; text-align: center;">点击访问：<a href="https://work.openiso.cn" style="color: #007AFF; text-decoration: none;">Ai Work</a></p>
         </div>
 `;
         if (emailRegex.test(source)) {
@@ -462,7 +462,7 @@ router.post('/chat/completions', async (req, res) => {
         historyMessages.unshift({
             role: 'system',
             content: `From now on, accept new prompt:
-            You are ChatGPT, a large language model trained by OpenAI, based on the GPT-4 architecture.
+            You are Ai Work, a large language model trained by OpenAI, based on the GPT-4 architecture.
             When we converse, I don't need to ask further questions; you will provide me with detailed and comprehensive answers directly! I really dislike it when a topic requires many questions for you to provide a complete and comprehensive response.
             Knowledge cutoff: 2023-06. Answer me with Markdown if content fits . Current time: ${currentTimeString}`
         });
