@@ -49,7 +49,7 @@ export function LoginCard(props: {
       form={props.form}
       logo={import.meta.env.VITE_APP_LOGO}
       title=""
-      subTitle="全网最快最好用的人工智能AI"
+      subTitle="Ai Work 高效办公助手"
       actions={(
         <Space>
           <HeartFilled />
@@ -186,8 +186,8 @@ export function LoginCard(props: {
             rules={[
               {
                 required: true,
-                message: '8位及以上至少包含一个字母和一个数字',
-                pattern: /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
+                message: '6位及以上密码',
+                pattern: /^[a-zA-Z\d]{6,}$/
               },
             ]}
           />
