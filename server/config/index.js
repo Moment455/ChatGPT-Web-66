@@ -21,7 +21,7 @@ function getConfig(key) {
 		redis_config: {  // Redis配置信息，一般不用改
 			type: 'redis',
 			host: '127.0.0.1',
-			port: 6378,
+			port: 6379,
 			password: '19990414'
 		},
 		email: '2371605990@qq.com',  // 邮件地址
