@@ -77,17 +77,17 @@ function ConfigModal(props: Props) {
           </FormItemCard>
         </>
       )} */}
-      {/* <FormItemCard title="携带历史消息数" describe="每次请求携带的历史消息数">
+      <FormItemCard title="携带历史消息数" describe="每次请求携带的历史消息数">
         <ProFormSlider name="limit_message" max={10} min={0} step={1} />
-      </FormItemCard> */}
+      </FormItemCard>
       <FormItemCard title="随机性" describe="值越大，回复越随机，大于 1 的值可能会导致乱码">
-        <ProFormSlider name="temperature" max={2} min={-2} step={0.1} />
+        <ProFormSlider name="temperature" max={2} min={0} step={0.1} />
       </FormItemCard>
       <FormItemCard title="话题新鲜度" describe="值越大，越有可能扩展到新话题">
-        <ProFormSlider name="presence_penalty" max={2} min={-2} step={0.1} />
+        <ProFormSlider name="presence_penalty" max={1} min={0} step={0.1} />
       </FormItemCard>
       <FormItemCard title="重复性" describe="文本中重复单词和短语的频率，越大越不流畅">
-        <ProFormSlider name="frequency_penalty" max={2} min={-2} step={0.1} />
+        <ProFormSlider name="frequency_penalty" max={2} min={0} step={0.1} />
       </FormItemCard>
       <FormItemCard title="单次回复限制" describe="单次交互所用的最大 Token 数">
         <ProFormSlider name="max_tokens" max={8000} min={100} step={1} />
