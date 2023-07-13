@@ -32,7 +32,7 @@ function Reminder(){
     return (
 <div className={styles.reminder}>
         <h2 className={styles.reminder_title}><img src="https://www.imageoss.com/images/2023/04/23/robot-logo4987eb2ca3f5ec85.png" alt="" />欢迎来到 {import.meta.env.VITE_APP_TITLE}</h2>
-        <p className={styles.reminder_message}>与AI智能聊天，畅想无限可能！基于先进的AI引擎，让你的交流更加智能、高效、便捷！</p>
+        <p className={styles.reminder_message}>用Ai办公，畅想无限可能！基于先进的AI引擎，让你的工作更加高效、便捷！</p>
         <p className={styles.reminder_message}><span>Shift</span> + <span>Enter</span> 换行。开头输入 <span>/</span> 召唤 Prompt 角色预设。</p>
         <div className={styles.reminder_question}>
             {
