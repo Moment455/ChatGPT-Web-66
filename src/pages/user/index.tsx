@@ -269,8 +269,8 @@ function UserPage() {
             rules={[
               {
                 required: true,
-                message: '8位及以上至少包含一个字母和一个数字',
-                pattern: /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
+                message: '6位及以上密码',
+                pattern: /^[a-zA-Z\d]{6,}$/
               }
             ]}
           />
