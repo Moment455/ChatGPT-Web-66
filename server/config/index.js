@@ -24,15 +24,15 @@ function getConfig(key) {
 			port: 6379,
 			password: ''
 		},
-		email: '2371605990@qq.com',  // 邮件地址
+		email: 'openiso@163.com',  // 邮件地址
 		email_config: {  // 邮件配置信息
-			host: 'smtp.qq.com',  // SMTP服务器地址
+			host: 'smtp.163.com',  // SMTP服务器地址
 			port: 465,  // SMTP服务器端口号
 			ignoreTLS: false,  // 是否忽略TLS
 			secure: true,  // 是否使用安全连接
 			auth: {
-				user: '2371605990@qq.com',  // SMTP服务器用户名
-				pass: 'zeuoyhqmwrrgdijf'  // SMTP服务器密码
+				user: 'openiso@163.com',  // SMTP服务器用户名
+				pass: 'xxxxxxx'  // SMTP服务器密码
 			}
 		}
 	};
