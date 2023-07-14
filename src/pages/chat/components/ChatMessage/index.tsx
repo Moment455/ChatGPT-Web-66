@@ -10,6 +10,10 @@ import mila from 'markdown-it-link-attributes'
 import hljs from 'highlight.js'
 import { CopyOutlined, DeleteOutlined, MoreOutlined, RedoOutlined } from '@ant-design/icons'
 
+import gpt4png from '@/assets/4.png';
+import gpt3png from '@/assets/3.png';
+import gptheaderpng from '@/assets/header.png';
+
 const dropdownItems = [
   {
     icon: <CopyOutlined />,
@@ -194,7 +198,7 @@ function ChatMessage({
       {position === 'left' &&
         chatAvatar({
           style: { marginRight: 8 },
-          icon: model && model.indexOf('gpt-4') !== -1 ? 'https://u1.dl0.cn/icon/chat_gpt_4.png' : 'https://u1.dl0.cn/icon/openailogo.svg'
+          icon: model && model.indexOf('gpt-4') !== -1 ? gpt4png : gpt3png
         })}
       <div className={styles.chatMessage_content}>
         <span
@@ -257,7 +261,7 @@ function ChatMessage({
       {position === 'right' &&
         chatAvatar({
           style: { marginLeft: 8 },
-          icon: 'https://u1.dl0.cn/icon/1682426702646avatarf3db669b024fad66-1930929abe2847093.png'
+          icon: gptheaderpng
         })}
     </div>
   )
