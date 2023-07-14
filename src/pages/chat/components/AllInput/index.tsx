@@ -108,7 +108,7 @@ function AllInput(props: Props) {
           value={prompt}
           // showCount
           size="large"
-          placeholder="问点什么吧..."
+          placeholder="问点什么吧...(Shift + Enter = 换行)"
           // (Shift + Enter = 换行)
           autoSize={{
             maxRows: 4
