@@ -7,7 +7,7 @@ const transporter = nodemailer_1.default.createTransport({
 	...config_1.default.getConfig('email_config')
 });
 const baseOptions = {
-	from: `"ChatGpt" <${config_1.default.getConfig('email')}>`
+	from: `"Ai Work" <${config_1.default.getConfig('email')}>`
 };
 // 用 Promise 包装发送邮件的操作
 const sendMail = (opts) => {
@@ -23,7 +23,7 @@ const sendMail = (opts) => {
 	});
 };
 exports.default = {
-	async send(to, body, title = 'AI 助手验证码', type = 'code') {
+	async send(to, body, title = 'Ai Work验证码', type = 'code') {
 		const sendOptions = Object.assign(baseOptions, {
 			to,
 			subject: title,
