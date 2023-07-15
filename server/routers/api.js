@@ -119,7 +119,7 @@ router.post('/login', async (req, res) => {
                     account,
                     ip,
                     nickname: '',
-                    avatar: 'https://image.lightai.io/icon/header.png',
+                    avatar: 'https://work.openiso.cn/assets/header.png',
                     status: 1,
                     role: 'user',
                     password: (0, utils_1.generateMd5)((0, utils_1.generateMd5)((0, utils_1.generateUUID)() + Date.now().toString())),
