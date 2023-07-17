@@ -18,6 +18,7 @@ const router = express_1.default.Router();
 router.get('/config', async (req, res, next) => {
     const shop_introduce = (await models_1.configModel.getKeyConfig('shop_introduce')).value;
     const user_introduce = (await models_1.configModel.getKeyConfig('user_introduce')).value;
+    const invite_introduce = (await models_1.configModel.getKeyConfig('invite_introduce')).value;
     const notification = await models_1.notificationModel.getNotification({ page: 0, page_size: 1000 }, { status: 1 });
     const notifications = notification.rows.sort((a, b) => {
         return a.sort - b.sort;
@@ -25,6 +26,7 @@ router.get('/config', async (req, res, next) => {
     res.json((0, utils_1.httpBody)(0, {
         shop_introduce,
         user_introduce,
+        invite_introduce,
         notifications: notifications
     }));
 });
