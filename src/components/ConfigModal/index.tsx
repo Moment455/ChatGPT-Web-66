@@ -77,9 +77,9 @@ function ConfigModal(props: Props) {
           </FormItemCard>
         </>
       )} */}
-      <FormItemCard title="携带历史消息数" describe="每次请求携带的历史消息数">
+      {/* <FormItemCard title="携带历史消息数" describe="每次请求携带的历史消息数">
         <ProFormSlider name="limit_message" max={10} min={0} step={1} />
-      </FormItemCard>
+      </FormItemCard> */}
       <FormItemCard title="随机性" describe="值越大，回复越随机，大于 1 的值可能会导致乱码">
         <ProFormSlider name="temperature" max={2} min={0} step={0.1} />
       </FormItemCard>
