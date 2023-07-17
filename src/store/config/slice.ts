@@ -57,7 +57,7 @@ const configStore = create<ConfigState>()(
         frequency_penalty: 0,
         max_tokens: 2000
       },
-      limit_message: 5,
+      //limit_message: 5,
       setConfigModal: (value) => set({ configModal: value }),
       changeConfig: (config) =>
         set((state: ConfigState) => ({
