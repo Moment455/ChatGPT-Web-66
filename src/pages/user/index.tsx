@@ -37,15 +37,15 @@ function UserPage() {
     })
   }
 
-  const monthDays = useMemo(() => {
-  const year = new Date().getFullYear()
-  const month = new Date().getMonth() + 1
-  const daysInMonth = new Date(year, month, 1).getDate()
-  const dateArray = Array.from({ length: daysInMonth }, (_, i) => {
-    const day = i + 1
-    return formatTime('yyyy-MM-dd', new Date(`${year}-${month}-${day}`))
-  })
-  return dateArray
+    const monthDays = useMemo(() => {
+    const year = new Date().getFullYear()
+    const month = new Date().getMonth() + 1
+    const daysInMonth = new Date(year, month, 0).getDate()
+    const dateArray = Array.from({ length: daysInMonth }, (_, i) => {
+      const day = i + 1
+      return formatTime('yyyy-MM-dd', new Date(`${year}-${month}-${day}`))
+    })
+    return dateArray
   }, [])
 
   const userMonthDays = useMemo(() => {
@@ -149,29 +149,6 @@ function UserPage() {
                   {user_info?.is_signin ? '今日已签到' : '立即签到'}
                 </Button>
               </Space>
-            </div>
-            {/* 邀请区域 */}
-            <div className={styles.userPage_card}>
-              <h4>邀请链接/二维码</h4>
-              <div className={styles.userPage_invite}>
-                <QRCode
-                  size={160}
-                  value={`${location.origin}/login?invite_code=${user_info?.invite_code}`}
-                  color="#1877ff"
-                />
-                <div className={styles.userPage_invite_info}>
-                  <p className={styles.userPage_invite_info_link}>
-                    <Typography.Paragraph copyable style={{ marginBottom: 0, color: '#1877ff' }}>
-                      邀请链接：{`${location.origin}/login?invite_code=${user_info?.invite_code}`}
-                    </Typography.Paragraph>
-                  </p>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: invite_introduce
-                    }}
-                  />
-                </div>
-              </div>
             </div>
           </Space>
         </div>
